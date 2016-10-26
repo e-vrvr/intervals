@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           targetNamespace="com.intervals"
+           xmlns="com.intervals"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="intervals_request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="attendees">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="id" maxOccurs="unbounded" minOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="meeting_duration_minutes">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minExclusive value="0"/>
+                            <xs:maxExclusive value="600"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="timeslots_needed" default="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:byte">
+                            <xs:minExclusive value="0"/>
+                            <xs:maxExclusive value="20"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="seeking_range">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:dateTime" name="from"/>
+                            <xs:element type="xs:dateTime" name="to"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

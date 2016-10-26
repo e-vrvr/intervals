@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i:intervals_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:i="com.intervals"
+                  xsi:schemaLocation="com.intervals ../schema/config.xsd">
+    <i:working_hours>
+        <i:from>09:00:00</i:from>
+        <i:to>18:00:00</i:to>
+    </i:working_hours>
+    <i:timezone>+00:00</i:timezone>
+</i:intervals_config>

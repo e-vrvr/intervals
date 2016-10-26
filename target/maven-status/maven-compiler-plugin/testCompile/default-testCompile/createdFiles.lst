@@ -1,0 +1,8 @@
+com\intervals\service\ResourceHandlerTest.class
+com\intervals\util\RequestReaderTest.class
+com\intervals\util\DataReaderTest.class
+com\intervals\service\MeetingTimeServiceTest.class
+com\intervals\util\ConfigReaderTest.class
+com\intervals\interval\IntervalTreeTest.class
+com\intervals\service\ReaderServiceTest.class
+com\intervals\service\IntervalsNormalizeServiceTest.class

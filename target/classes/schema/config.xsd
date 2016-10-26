@@ -1,0 +1,26 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           targetNamespace="com.intervals"
+           xmlns="com.intervals"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="intervals_config">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="working_hours">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:time" name="from"/>
+                            <xs:element type="xs:time" name="to"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="timezone" default="+00:00">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[+|-]+([0-1][0-3])[:]([0,3,4][0,5])"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
